@@ -2,18 +2,16 @@
 
 STEP Semester 3 Java coursework and daily progress log.
 
-## Date: 10-10-2026
+## Date: 11-10-2026
 **Today's Work:**
 - Completed five Week 1 live-coding solutions and five Week 1 homework solutions.
-- Organized Week 1 work under `week_1/class_problems` and `week_1/assigment_problems` in `feature/session_1`.
 - Added five Week 2 live-coding solutions, five String/ASCII practice programs, and five Week 2 homework solutions.
-- Organized Week 2 programs under `week_2/class_problems` and `week_2/assigment_problems` in `feature/session_2`.
-- Added five Week 3 OOP practice programs under `week_3/class_problems`.
-- Added all five Week 3 OOP homework solutions under `week_3/assigment_problems`, covering object arrays, encapsulation, constructor overloading and chaining, reference identity, and static members.
+- Added five Week 3 OOP practice programs and five Week 3 OOP homework solutions.
+- Added five Week 4 OOP and Java keyword homework solutions under `week_4/assigment_problems` in `feature/session_4`: constructor chaining, `this`, `final` methods, static blocks, and `instanceof`.
 
 **Next Session Plan:**
-- Continue with the next STEP session's coursework.
-- Keep each session's work isolated on its feature branch.
+- Add Week 4 in-class problems when provided.
+- Continue with the next STEP session's coursework while keeping each session isolated on its feature branch.
 
 **Issues Faced:**
 - None currently.
