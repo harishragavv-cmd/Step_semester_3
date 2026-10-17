@@ -3,7 +3,7 @@ package week_5.class_problems;
 import java.util.Arrays;
 
  /*
-  * Assignment note: the brief asks BookingReceipt to be final and also asks
+  * Specification note: the brief asks BookingReceipt to be final and also asks
   * GroupBookingReceipt to extend it. Java cannot satisfy both requirements:
   * a final class cannot have subclasses. This class is kept non-final so the
   * required instanceof/group-subclass behavior works; its own state is immutable.
