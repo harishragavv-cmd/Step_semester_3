@@ -216,6 +216,22 @@ public class LibraryMember {
     }
 
     public static void main(String[] args) {
+        // Run the Week 6 Problem 5 example first so the first number is LIB-101.
+        LibraryMember firstMember = new LibraryMember(3);
+        firstMember.borrowBook();
+        firstMember.borrowBook("Fiction");
+        System.out.println(firstMember.memberNumber);
+        System.out.println("Members enrolled: " + getMembersEnrolled());
+        System.out.println("Books borrowed: " + firstMember.getBooksBorrowed());
+        System.out.println(isValidRenewalCode("R12A"));
+        System.out.println(isValidRenewalCode("R1A"));
+        System.out.println(isValidRenewalCode("X12A"));
+        System.out.println(processNightlyAudit(new LibraryMember[]{
+                new FacultyMember(5, "Physics"),
+                null,
+                new LibraryMember(3)
+        }));
+
         System.out.println(enrollBatch(
                 new String[]{"STU1", "LB1", "STU2", " ", "STU3"}, 3));
 
@@ -232,7 +248,13 @@ public class LibraryMember {
 
         HonorsStudentMember honors =
                 new HonorsStudentMember("STU3", 3, "ECE", 2);
+        honors.borrowBook();
+
         FacultyMember faculty = new FacultyMember("FAC4", 5, "Physics");
+        faculty.borrowBook();
+        faculty.borrowBook();
+        faculty.borrowBook();
+
         System.out.println(honors.displayInfo());
         System.out.println(faculty.displayInfo());
         System.out.println(classifyGeneration(honors));
@@ -243,23 +265,6 @@ public class LibraryMember {
         System.out.println(batchPrint(new LibraryMember[]{
                 new LibraryMember("LB5", 3),
                 new StudentMember("STU6", 3, "ECE")
-        }));
-
-        LibraryMember m1 = new LibraryMember(3);
-        m1.borrowBook();
-        m1.borrowBook("Fiction");
-        System.out.println(m1.memberNumber);
-        System.out.println("Books borrowed: " + m1.getBooksBorrowed());
-        System.out.println("Members enrolled: " + getMembersEnrolled());
-
-        System.out.println(isValidRenewalCode("R12A"));
-        System.out.println(isValidRenewalCode("R1A"));
-        System.out.println(isValidRenewalCode("X12A"));
-
-        System.out.println(processNightlyAudit(new LibraryMember[]{
-                new FacultyMember(5, "Physics"),
-                null,
-                new LibraryMember(3)
         }));
     }
 }
