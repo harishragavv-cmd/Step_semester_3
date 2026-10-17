@@ -17,7 +17,7 @@ Run: `java -cp out week_8.class_problems.VehicleRentalSystem`
 ```mermaid
 classDiagram
   RentalCustomer "1" --> "0..*" Rental : rents
-  Vehicle "1" --> "0..*" Rental : rental history
+  Vehicle "1" --> "0..1" Rental : current active rental
   Vehicle <|-- Sedan
   Vehicle <|-- SUV
   Vehicle <|-- Truck
@@ -94,7 +94,7 @@ Run: `java -cp out week_8.class_problems.PaymentProcessingSystem`
 ```mermaid
 classDiagram
   ShoppingCustomer "1" --> "0..*" ShoppingOrder : places
-  ShoppingOrder "1" *-- "1..*" OrderItem : contains
+  ShoppingOrder "1" *-- "0..*" OrderItem : contains (must be non-empty to pay)
   OrderItem --> ShoppingProduct
   PaymentMethod <|.. CreditCardPayment
   PaymentMethod <|.. PayPalPayment
