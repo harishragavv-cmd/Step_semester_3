@@ -41,6 +41,7 @@ public class ExamAttempt {
         }
 
         submitted = true;
+        System.out.println(examination.getTitle() + " submitted by " + student.getName() + ".");
         totalScore = 0;
         for (ExamQuestion question : examination.getQuestions()) {
             ExamAnswer answer = answers.get(question);
@@ -50,7 +51,6 @@ public class ExamAttempt {
             System.out.println("Result: " + question.getQuestionId() + ": "
                     + (correct ? "Correct" : "Incorrect") + " (" + points + " points).");
         }
-        System.out.println(examination.getTitle() + " submitted by " + student.getName() + ".");
         System.out.println("Total score: " + totalScore + "/" + examination.getMaximumScore() + ".");
     }
 }
