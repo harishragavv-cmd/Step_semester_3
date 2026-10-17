@@ -19,4 +19,19 @@ public final class GroupBookingReceipt extends BookingReceipt {
     public int getGroupSize() {
         return groupSize;
     }
+
+    @Override
+    public GroupBookingReceipt withUpdatedSeat(int index, String newSeat) {
+        String[] updatedSeats = getSeatNumbers();
+
+        if (index < 0 || index >= updatedSeats.length) {
+            throw new IndexOutOfBoundsException("Invalid seat index: " + index);
+        }
+        if (newSeat == null || newSeat.trim().isEmpty()) {
+            throw new IllegalArgumentException("Seat number cannot be blank");
+        }
+
+        updatedSeats[index] = newSeat;
+        return new GroupBookingReceipt(getBookingId(), updatedSeats, groupSize);
+    }
 }
