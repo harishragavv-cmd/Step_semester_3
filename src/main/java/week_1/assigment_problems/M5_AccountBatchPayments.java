@@ -1,24 +1,17 @@
 package week_1.assigment_problems;
 
 class FeeAccount {
-    public void processPayment(double amount) {
-        System.out.println("Paid in one go (day-scholar account)");
-    }
 }
 
 class HostelFeeAccount extends FeeAccount {
-    @Override
-    public void processPayment(double amount) {
-        System.out.println("Paid in two installments (hostel account)");
-    }
 }
 
 public class M5_AccountBatchPayments {
     public static void processPayment(FeeAccount account, double amount) {
         if (account instanceof HostelFeeAccount) {
-            account.processPayment(amount);
+            System.out.println("Paid in two installments (hostel account)");
         } else {
-            account.processPayment(amount);
+            System.out.println("Paid in one go (day-scholar account)");
         }
     }
 
