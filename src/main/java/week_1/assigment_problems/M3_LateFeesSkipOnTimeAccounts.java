@@ -3,7 +3,7 @@ package week_1.assigment_problems;
 class FeeRecord {
     private String regNo;
     private double totalFee;
-    private static final double LATE_FEE_RATE = 0.10;
+    private static final double DAILY_LATE_FEE_RATE = 0.01;
 
     public FeeRecord(String regNo, double totalFee) {
         this.regNo = regNo;
@@ -11,7 +11,10 @@ class FeeRecord {
     }
 
     public final double calculateLateFee(int daysLate) {
-        return daysLate > 0 ? totalFee * LATE_FEE_RATE : 0;
+        if (daysLate <= 0) {
+            return 0;
+        }
+        return totalFee * DAILY_LATE_FEE_RATE * daysLate;
     }
 
     public final void printSummary(int daysLate) {
